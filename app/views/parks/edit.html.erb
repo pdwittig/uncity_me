@@ -1,0 +1,50 @@
+<h1>Editing post</h1>
+ 
+<%= form_for :park, url: park_path(@park.id),
+method: :patch do |f| %>
+  <% if @park.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@park.errors.count, "error") %> prohibited
+      this park from being saved:</h2>
+    <ul>
+    <% @park.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </p>
+
+  <p>
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </p>
+
+  <p>
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </p>
+
+  <p>
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </p>
+ 
+  <p>
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Back', parks_path %>
