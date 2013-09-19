@@ -1,6 +1,6 @@
 <h1> :) </h1>
 
-
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=7&markers=#{@park.latitude}%2C#{@park.longitude}" %>
 
 <p>
   <strong>Name:</strong>
@@ -26,5 +26,19 @@
   <strong>Longitude:</strong>
   <%= @park.longitude %>
 </p>
+
+<p>
+  <strong> Description:</strong>
+  <%= @park.description %>
+</p>
+
+<br> <br> <br> <br>
+<h3> What's Nearby</h3>
+<ul>
+<% for park in @park.nearbys(100).limit(5) %>
+  <li><%= link_to park.name, park %> (<%= park.distance.round(2) %> miles)</li>
+<% end %>
+</ul>
+
 
 <%= link_to 'index', parks_path %>

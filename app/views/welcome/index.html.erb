@@ -1,12 +1,25 @@
 <h1> Uncity Me front page </h1> 
 
 <%= link_to 'New park', new_park_path %>
-<%= form_tag parks_path, :method => 'get' do %>
-	<p>
-		<%= text_field_tag :search, params[:search] %>
-		<%= submit_tag "Search"  %> 
-	</p>
+
+
+
+<br><br><br><br>
+
+<h2> Geocoded Search </h2>
+
+
+<%= form_tag parks_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search Near", :name => nil %>
+  </p>
+<%= check_box_tag(:drop_acid) %>
+<%= label_tag(:drop_acid, "Drop acid") %>
+<%= check_box_tag(:back_packing) %>
+<%= label_tag(:back_packing, "Backpacking") %>
+
 <% end %>
 
 
-<%= link_to "Parks Index", controller: "parks" %>
+

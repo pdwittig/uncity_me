@@ -1,7 +1,7 @@
 <h1> Listing Parks </h1>
 
 
-<%= will_paginate %>
+
 <table> 
 		<tr>
 			<th> ID: </th>
@@ -11,6 +11,8 @@
 			<th> Country </th>
 			<th> Latitude </th>
 			<th> Longitude </th>
+			<th> Description </th>
+			<th></th>
 			<th></th>
 			<th></th>
 			<th></th>
@@ -30,12 +32,13 @@
 			<td><%= park.country %></td>
 			<td><%= park.latitude %></td>
 			<td><%= park.longitude %></td>
+			<td><%= park.description %></td>
 			<td><%= link_to 'Show', park %></td>
 			<td><%= link_to 'Edit', edit_park_path(park) %> </td>
 			<td><%= link_to 'Destroy', park_path(park), method: :delete, data: {confirm: 'Are you sure?'} %></td>
 		</tr>
 	<% end %>
 </table>
-<%= will_paginate %>
+
 
 <%= link_to 'home', root_path %>
