@@ -6,6 +6,7 @@ class Park < ActiveRecord::Base
 	attr_accessible :city, :latitude, :longitude
 	geocoded_by :city 
 	after_validation :geocode
+	has_many :activities
 
 	#def self.search(search)
 	#	if search

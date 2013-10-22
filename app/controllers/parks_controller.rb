@@ -8,6 +8,7 @@ class ParksController < ApplicationController
 
 	def show 
 		@park = Park.find(params[:id])
+		@activity = Activity.where(:park_id => params[:id])
 	end
 
 	def create

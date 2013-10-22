@@ -7,6 +7,7 @@ class CreateParks < ActiveRecord::Migration
       t.string :country
       t.float :latitude
       t.float :longitude
+      t.text :description
 
       t.timestamps
     end
