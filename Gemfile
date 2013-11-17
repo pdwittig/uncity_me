@@ -10,7 +10,6 @@ gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'geocoder'
 gem 'protected_attributes'
-gem 'pg', '0.15.1'
 gem 'railties', '4.0.0'
 
 
@@ -21,6 +20,7 @@ group :development, :test do
   gem 'spork-rails', github: 'sporkrb/spork-rails'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.6'
+  gem 'sqlite3', '1.3.8'
 end
 
 group :test do
@@ -55,4 +55,6 @@ end
 group :production do
  
   gem 'rails_12factor', '0.0.2'
+  #gem 'pg', '0.15.1'
+
 end

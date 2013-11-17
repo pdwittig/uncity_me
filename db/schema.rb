@@ -22,13 +22,13 @@ ActiveRecord::Schema.define(version: 20130919031455) do
   end
 
   create_table "parks", force: true do |t|
-    t.text     "description"
     t.string   "name"
     t.string   "city"
     t.string   "state"
     t.string   "country"
     t.float    "latitude"
     t.float    "longitude"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
