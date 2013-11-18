@@ -1,0 +1,1 @@
+{"klass":"Taps::Pull","database_url":"postgres://pdwittig@localhost/uncityme_development","remote_url":"http://pdwittig:Cal27986@localhost:5000","session_uri":"/sessions/7531956603","stream_state":{},"completed_tables":["schema_migrations","parks"],"table_filter":null,"remote_tables_info":{"schema_migrations":200,"parks":200,"activities":200}}
