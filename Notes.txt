@@ -1,5 +1,5 @@
 -- Use this command to pull the latest db from heroku
    heroku pg:pull HEROKU_POSTGRESQL_ROSE_URL uncityme_development --app floating-basin-3466
 
- --this is a test
- 
+ --this is a
+
