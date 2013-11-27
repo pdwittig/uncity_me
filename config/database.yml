@@ -32,16 +32,3 @@ test:
   pool: 5
   username: dorotakopczyk
   password:
-
-production:
-#  adapter: sqlite3
-#  database: db/production.sqlite3
-#  pool: 5
-#  timeout: 5000
-  adapter: postgresql
-  #host: ec2-54-204-41-249.compute-1.amazonaws.com
-  encoding: unicode
-  #database: d3p2rm5u0ei60h
-  pool: 5
-  #username: wwmmtwhodkuuvb
-  #password: JRKmh_IIYHnL2Am3I4GDG7b4Sv
