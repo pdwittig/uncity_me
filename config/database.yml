@@ -31,4 +31,4 @@ test:
   database: uncityme_test
   pool: 5
   username: dorotakopczyk
-  password:test
+  password:

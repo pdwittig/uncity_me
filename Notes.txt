@@ -2,4 +2,6 @@
    heroku pg:pull HEROKU_POSTGRESQL_ROSE_URL uncityme_development --app floating-basin-3466
 
  --this is a fucking test (fixed)
+
+ --dorota added this line of code
  
