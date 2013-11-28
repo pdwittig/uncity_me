@@ -1,13 +1,7 @@
 -- Use this command to pull the latest db from heroku
    heroku pg:pull HEROKU_POSTGRESQL_ROSE_URL uncityme_development --app floating-basin-3466
 
- --this is a fucking test (fixed)
-
- --dorota added this line of code and phil added something to make this work
-
-
-
-
- -- phil added this line of code
-
+-- Use these commands to create a univeral postgres user that we can share. (You will notice I have already changed the db.yml)
+		psql
+		create user zeman with superuser;
  
