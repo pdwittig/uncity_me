@@ -1,7 +1,22 @@
 -- Use this command to pull the latest db from heroku
-   heroku pg:pull HEROKU_POSTGRESQL_ROSE_URL uncityme_development --app floating-basin-3466
+  	psql
+  	DROP DATABASE uncityme_development;
+  	\q
+  	heroku pg:pull HEROKU_POSTGRESQL_ROSE_URL uncityme_development --app floating-basin-3466
+
 
 -- Use these commands to create a univeral postgres user that we can share. (You will notice I have already changed the db.yml)
 		psql
-		create user zeman with superuser;
+		CREATE USER zeman with superuser;
  
+
+-- Git workflow
+		1) You already have the db cloned so you should never have to worrry about that again
+		2) When you are ready to commmit try 'git status' to see all the files you have changed
+		3) Either run 'git add .' to add stages all changes/files at once or run 'git add <file name>' to incrementally stage
+		4) Run 'git commit -m "Enter a note"' to commit staged changes
+		5) Run 'git push' to push local repo up to github.  If you have the latest upstream version (no sync errors) then procees to STEP 8
+		6) Else, run 'git pull --rebase origin master' to get fresh copy and place your mods on tip
+		7) If conflicts exist make desires changes and run 'git rebase --continue <some file>' to continue
+		8) When pull is complete run 'git push'
+		9) Run 'git push heroku'
