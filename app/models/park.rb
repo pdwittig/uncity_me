@@ -8,6 +8,9 @@ class Park < ActiveRecord::Base
 	after_validation :geocode
 	has_many :activities
 
+	def self.search(search, page)
+		paginate :per_page => 5, :page=> page
+	end
 	#def self.search(search)
 	#	if search
 	#		find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
