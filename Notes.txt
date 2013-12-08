@@ -20,3 +20,6 @@
 		7) If conflicts exist make desires changes and run 'git rebase --continue <some file>' to continue
 		8) When pull is complete run 'git push'
 		9) Run 'git push heroku'
+
+-- To add new assetts you need to run the following
+		rake assets:precompile
