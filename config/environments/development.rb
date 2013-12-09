@@ -28,5 +28,5 @@ UncityMe::Application.configure do
   config.assets.debug = true
 
   # Because rails says so - for assett pre complilation
-  config.assets.prefix = "/dev-assets"
+  #config.assets.prefix = "/dev-assets"
 end
