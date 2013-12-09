@@ -231,7 +231,7 @@ DEPENDENCIES
   pg (= 0.15.1)
   protected_attributes
   rails (= 4.0.0)
-  rails_12factor (= 0.0.2)
+  rails_12factor
   railties (= 4.0.0)
   rspec-rails (= 2.13.1)
   sass-rails (= 4.0.0)
