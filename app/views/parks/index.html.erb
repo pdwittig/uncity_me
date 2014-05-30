@@ -1,17 +1,22 @@
-<h1> Listing Parks (Within 500 Miles) </h1>
-
+<div ID = 'header' >
+	<h1> 
+		Listing Parks (Within 500 Miles) 
+	</h1>
+</div>
 
 <div ID = 'indexTable'>
-<table> 
+<table class = "center"> 
 		<tr>
-			<th> ID: </th>
+			<!-- <th> ID: </th> -->
 			<th> Name </th> 
 			<th> City </th>
 			<th> State </th>
 			<th> Country </th>
+			<th> Distance </th>
 			<!-- HIDDEN <th> Latitude </th>
 			<th> Longitude </th>  -->
-			<th> Description </th>
+			<!--<th> Description </th> -->
+			<!-- <th></th>
 			<th></th>
 			<th></th>
 			<th></th>
@@ -19,31 +24,34 @@
 			<th></th>
 			<th></th>
 			<th></th>
-			<th></th>
-			<th></th>
+			<th></th> -->
 		</tr> 
 
 	<% @parks.each do |park| %>
 		<tr>
-			<td><%= park.id %></td>
+			<!--<td><%= park.id %></td> -->
 			<td><%= park.name %></td>
 			<td><%= park.city %></td>
 			<td><%= park.state %></td>
 			<td><%= park.country %></td>
 			<!-- HIDDEN, who gives a shit <td><%= park.latitude %></td> 
 			<td><%= park.longitude %></td> -->
-			<td><%= park.description %></td>
-			<td><%= link_to 'Show', park %></td>
-			<td><%= link_to 'Edit', edit_park_path(park) %> </td>
+			<!-- HIDDEN <td><%= park.description %></td> -->
+			<td><%= park.distance.round(2)%>  miles</td>
+			<td><%= link_to 'View', park %></td>
+			<!-- HIDDEN <td><%= link_to 'Edit', edit_park_path(park) %> </td> -->
 			<!-- HIDDEN <td><%= link_to 'Destroy', park_path(park), method: :delete, data: {confirm: 'Are you sure?'} %></td> --> 
 		</tr>
 	<% end %>
 </table>
 </div>
+
+<div ID = 'pageBar'>
 <%= will_paginate @parks %>
 
 
 <%= link_to 'home', root_path %>
+</div>
 
 
 

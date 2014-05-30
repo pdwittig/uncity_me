@@ -48,9 +48,9 @@ class ParksController < ApplicationController
 
 	def index
   		if params[:search].present?
-    		@parks = Park.near(params[:search], 500).paginate(:page => params[:page], :per_page => 20)
+    		@parks = Park.near(params[:search], 500).paginate(:page => params[:page], :per_page => 15)
  		 else
-    		@parks = Park.all.paginate(:page => params[:page], :per_page => 20)
+    		@parks = Park.all.paginate(:page => params[:page], :per_page => 15)
   		end
 	end
 

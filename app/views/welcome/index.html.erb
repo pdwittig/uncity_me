@@ -3,11 +3,13 @@
 <html>
 
 <body>
+<div id = 'headerLogo'>
 	<h1><%= image_tag("logo.png")%></h1> 
+</div> 
 <div id="main">
 	
 
-	# <%= link_to 'New park', new_park_path %>
+	<%= link_to 'New park', new_park_path %>
 
 	
   	<%= form_tag parks_path, :method => :get do %>
