@@ -37,10 +37,10 @@
 			<!-- HIDDEN, who gives a shit <td><%= park.latitude %></td> 
 			<td><%= park.longitude %></td> -->
 			<!-- HIDDEN <td><%= park.description %></td> -->
-			<td><%= park.distance.round(2)%>  miles</td>
+			<td><%= park.distance.round(2)%>  miles</td> 
 			<td><%= link_to 'View', park %></td>
 			<!-- HIDDEN <td><%= link_to 'Edit', edit_park_path(park) %> </td> -->
-			<!-- HIDDEN <td><%= link_to 'Destroy', park_path(park), method: :delete, data: {confirm: 'Are you sure?'} %></td> --> 
+			<!-- <td><%= link_to 'Destroy', park_path(park), method: :delete, data: {confirm: 'Are you sure?'} %></td>  -->
 		</tr>
 	<% end %>
 </table>

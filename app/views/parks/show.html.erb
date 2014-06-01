@@ -1,53 +1,59 @@
+
+<div ID = 'parkShow'>
 <h1><%= @park.name %></h1>
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=550x400&sensor=false&zoom=6&markers=#{@park.latitude}%2C#{@park.longitude}" %>
+  <div ID = 'img' > 
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=550x400&sensor=false&zoom=6&markers=#{@park.latitude}%2C#{@park.longitude}" %>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @park.name %>
-</p>
-<p>
-  <strong>City:</strong>
-  <%= @park.city %>
-</p>
-<p>
-  <strong>State:</strong>
-  <%= @park.state %>
-</p>
-<p>
-  <strong>Country:</strong>
-  <%= @park.country %>
-</p>
-<p>
-  <strong>Latitude:</strong>
-  <%= @park.latitude %>
-</p>
-<p>
-  <strong>Longitude:</strong>
-  <%= @park.longitude %>
-</p>
+  <div ID ='textContainer'>
+    <strong>Name:</strong>
+    <%= @park.name %>
+    <br>
 
-<p>
-  <strong> Description:</strong>
-  <%= @park.description %>
-</p>
+    <strong>City:</strong>
+    <%= @park.city %>
+    <br> 
 
-<p>
-  <strong> Activities: </strong>
-  <ul>
-  <% @activity.each do |activity| %>
-    <li><%= "#{activity.activity}" %></li>
-  <% end %>
-</ul>
-</p>
+    <strong>State:</strong>
+    <%= @park.state %>
+    <br>
 
-<br> <br> <br> <br>
-<h3> What's Nearby</h3>
-<ul>
-<% for park in @park.nearbys(100).limit(5) %>
-  <li><%= link_to park.name, park %> (<%= park.distance.round(2) %> miles)</li>
-<% end %>
-</ul>
+    <strong>Country:</strong>
+    <%= @park.country %>
+    <br>
+
+    <strong>Latitude:</strong>
+    <%= @park.latitude %>
+    <br>
+
+    <strong>Longitude:</strong>
+    <%= @park.longitude %>
+    <br> 
+
+    <strong> Description:</strong>
+    <%= @park.description %>
+    <br> 
+
+    <strong> Activities: </strong>
+    <ul>
+      <% @activity.each do |activity| %>
+        <li><%= "#{activity.activity}" %></li>
+       <% end %>
+     </ul>
+
+
+ 
+    <h4> What's Nearby</h4>
+    <ul>
+      <% for park in @park.nearbys(100).limit(5) %>
+      <li><%= link_to park.name, park %> (<%= park.distance.round(2) %> miles)</li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
 
 
 <%= link_to 'index', parks_path %>
