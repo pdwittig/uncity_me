@@ -2,17 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-/*.main {
-	background: url(Grand_Island_DPMT_13.JPG)no-repeat center center fixed;
-
-  -webkit-background-size: 100% auto;
-/*  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-*/
-
-
 html 
 { 
   background: image-url("Grand_Island_DPMT_13.JPG") no-repeat top center fixed; 
@@ -25,21 +14,40 @@ html
 
 body {
 	background-color: transparent;
+	text-align: center;
 }
 
 #main
 {
-
-	position: absolute;
-	bottom: 10px;
-	margin: 15px;
-	padding-left: 5px;
+	text-align: center;
+	margin-top: 300px;
+	postition: absolute;
 }
 
 #headerLogo{
-	
-	margin: 2px;
-	padding-top: 30px;
-	padding-left: 5px;
+	position: relative;
 }
 
+.button {
+  display: inline-block;
+  padding: 2px 5px 5px;
+  margin-bottom: 1; // For input.btn
+  font-size: 12;
+  //font-weight: bold;
+  line-height: 1;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  background-color:rgba(255,255,255,0.6);
+  //.buttonBackground(@white, darken(@white, 10%));
+  border:3px ;
+  border-radius: 5px;
+  //.border-radius(4px);
+  //@shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  //.box-shadow(@shadow);
+  cursor: pointer;
+
+  // Give IE7 some love
+  //.reset-filter();
+  //.ie7-restore-left-whitespace();
+}

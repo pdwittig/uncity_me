@@ -15,7 +15,9 @@
   	<%= form_tag parks_path, :method => :get do %>
     	<p>
       	<%= text_field_tag :search, params[:search] %>
-      	<%= submit_tag "Search Near", :name => nil %>
+       <br>
+        <%= submit_tag "Search Near", :class => 'button', :name => nil %>
+
     	</p>
   	<% end %>
 
@@ -24,3 +26,6 @@
 </body>
 
 </html>
+
+
+
