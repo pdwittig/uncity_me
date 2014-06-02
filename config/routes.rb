@@ -1,6 +1,6 @@
 UncityMe::Application.routes.draw do
-  get "static_pages/about"
-  get "static_pages/contact"
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/contact',   to: 'static_pages#contact',   via: 'get'
  resources :parks, :activities
 
 
