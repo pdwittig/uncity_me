@@ -12,6 +12,7 @@ gem 'geocoder'
 gem 'protected_attributes'
 gem 'railties', '4.0.0'
 gem 'pg', '0.15.1'
+gem 'sprockets', '2.11.0'
 
 
 group :development, :test do
