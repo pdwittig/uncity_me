@@ -44,7 +44,7 @@
 
 
  
-    <h4> What's Nearby</h4>
+    <h4> What is Nearby</h4>
     <ul>
       <% for park in @park.nearbys(100).limit(5) %>
       <li><%= link_to park.name, park %> (<%= park.distance.round(2) %> miles)</li>
