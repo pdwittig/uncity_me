@@ -6,6 +6,9 @@
       <%= image_tag "http://maps.google.com/maps/api/staticmap?size=550x400&sensor=false&zoom=6&markers=#{@park.latitude}%2C#{@park.longitude}" %>
   </div>
 
+
+
+
   <div ID ='textContainer'>
     <strong>Name:</strong>
     <%= @park.name %>
@@ -23,13 +26,13 @@
     <%= @park.country %>
     <br>
 
-    <strong>Latitude:</strong>
+    <!--<strong>Latitude:</strong>
     <%= @park.latitude %>
     <br>
 
     <strong>Longitude:</strong>
     <%= @park.longitude %>
-    <br> 
+    <br>  -->
 
     <strong> Description:</strong>
     <%= @park.description %>

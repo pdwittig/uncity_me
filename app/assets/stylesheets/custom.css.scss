@@ -2,20 +2,20 @@
 
 #indexTable {
 	padding-top: 5px;
-	background-color:rgba(255,255,255,0.6);
+	background-color:rgba(255,255,255,0.5);
 	margin-right: 200px;
 	margin-top: 10px;
 
 }
 
 header{
-  border-bottom: 1px solid green;
+  border-bottom: 2px solid #996666;
   //border shadow
   color: #999;
-  background-color: black;
-  -webkit-box-shadow: 0px 1px 1px #009933;
-  -moz-box-shadow: 0px 1px 1px #009933;
-  box-shadow: 0px 1px 1px #009933;
+  background-color: #999999;
+  -webkit-box-shadow: 0px 1px 1px #996666;
+  -moz-box-shadow: 0px 1px 2px #996666;
+  box-shadow: 0px 1px 1px #996666;
   padding-right: 20px;
   padding-left: 10px;
   position: fixed;
