@@ -5,11 +5,15 @@ UncityMe::Application.routes.draw do
   match '/signup', to: 'users#new', via: 'get'
   match '/home', to:'welcome#index' , via: 'get'
  resources :parks, :activities, :users
-
+ resources :sessions, only: [:new, :create, :destroy]
 
  root 'welcome#index'
  match '/show', to: 'parks#show', via: 'get'
  match '/edit', to: 'parks#edit', via: 'get'
+ match '/signin',  to: 'sessions#new',         via: 'get'
+ match '/signout', to: 'sessions#destroy',     via: 'delete'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6 }
 
+  #attr_accessor :password , :name, :email
+  attr_accessible :name, :email, :password, :password_confirmation
+
 end

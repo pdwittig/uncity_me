@@ -12,18 +12,20 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to UncityMe!"
+      #flash[:success] = "Welcome to UncityMe!"
       redirect_to @user
     else
       render 'new'
     end
   end
 
+  def current_user=(user)
+    @current_user = user
+  end
+
 private
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
-    end
-
+ def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :password_digest)
+  end
 end
