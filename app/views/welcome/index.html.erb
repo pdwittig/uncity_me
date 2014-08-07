@@ -13,14 +13,9 @@
   
   	<%= form_tag parks_path, :method => :get do %>
     	<p>
-      
-
-    please work
-      	<%= text_field_tag :search, params[:search] %>
-       
+      	<%= text_field_tag :search, params[:search] %>      
        <br>
-        <%= submit_tag "Search Near", :class => 'button', :name => nil %>
-      
+        <%= submit_tag "Search Near", :class => 'button', :name => nil %>   
     	</p>
   	<% end %>
 
