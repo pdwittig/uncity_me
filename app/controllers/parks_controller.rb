@@ -50,7 +50,7 @@ class ParksController < ApplicationController
   		if params[:search].present?
     		@parks = Park.near(params[:search], 500).paginate(:page => params[:page], :per_page => 15)
  		 else
-    		@parks = Park.near(request.location.try(:city)).paginate(:page => params[:page], :per_page => 15)
+    		@parks = Park.near(request.location).paginate(:page => params[:page], :per_page => 15)
   		end
 	end
 
