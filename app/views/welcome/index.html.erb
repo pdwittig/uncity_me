@@ -14,11 +14,22 @@
   	<%= form_tag parks_path, :method => :get do %>
     	<p>
       
+       <%= fields_for parks_path do |form| %> 
+            fishing: <%= form.check_box :day, {}, 'fishing', ''  %>
+            car camping: <%= form.check_box :day, {}, 'car camping', '' %>
+            backcountry camping: <%= form.check_box :day, {}, 'backcountry camping', '' %>
+            <br>
+            historical site: <%= form.check_box :day, {}, 'historical site', '' %>
+            cabin camping: <%= form.check_box :day, {}, 'cabin camping', '' %>
+            accessible cabin: <%= form.check_box :day, {}, 'accessible cabin', '' %>
+          <% end %>
+        <br>
+    
       	<%= text_field_tag :search, params[:search] %>
        
        <br>
         <%= submit_tag "Search Near", :class => 'button', :name => nil %>
-
+      
     	</p>
   	<% end %>
 

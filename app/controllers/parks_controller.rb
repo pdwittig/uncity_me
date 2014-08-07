@@ -2,6 +2,8 @@ class ParksController < ApplicationController
 
 	http_basic_authenticate_with name: "Dort", password: "Alien129", except: [:index, :show]
 
+
+
 	def new
 		@park = Park.new
 	end
@@ -49,10 +51,10 @@ class ParksController < ApplicationController
 	def index
   		if params[:search].present?
     		@parks = Park.near(params[:search], 500).paginate(:page => params[:page], :per_page => 15)
- 		 else
-    		@parks = Park.near(request.location).paginate(:page => params[:page], :per_page => 15)
-  		end
+ 		else
+    		@parks = Park.near('Madison', 500).paginate(:page => params[:page], :per_page => 15)
 	end
+end
 
 
 private

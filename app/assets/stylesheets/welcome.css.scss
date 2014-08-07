@@ -23,6 +23,11 @@ body {
 	text-align: center;
 	margin-top: 300px;
 	postition: absolute;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 175px;
+  margin-left: 175px;
+  background-color:rgba(153,153,153,0.6);
 }
 
 #headerLogo{
@@ -55,6 +60,6 @@ body {
 }
 
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {   
-border-color: rgba(62, 150, 32, 0.8);
-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(62, 150, 32, 0.8);
+border-color: rgba(153, 202, 202, 0.8);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(153, 102, 102, 0.8);
 outline: 0 none;}
