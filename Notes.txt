@@ -2,7 +2,7 @@
   	psql
   	DROP DATABASE uncityme_development;
   	\q
-  	heroku pg:pull HEROKU_POSTGRESQL_ROSE_URL uncityme_development --app floating-basin-3466
+  	heroku pg:pull HEROKU_POSTGRESQL_ROSE_URL uncityme_development --app uncityme
 
 
 -- Use these commands to create a univeral postgres user that we can share. (You will notice I have already changed the db.yml)
